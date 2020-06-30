@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Image app</title>
+    </head>
+    <body>
+        <h1>Image filters</h1>
+
+        <h3>Download url file</h3>
+        <input type="text" name="base_url" label="Insert image URL">
+        <button>Download</button>
+
+        <h3>Upload from computer</h3>
+        <form action="/upload-image" method="POST" enctype="multipart/form-data">
+            <label>Select image</label>
+            <input type="file" name="image" label="Select image">
+            <button type="submit">Upload</button>
+        </form>
+        
+    </body>
+</html>
