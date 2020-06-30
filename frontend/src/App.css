@@ -1,0 +1,12 @@
+.container-inside{
+	display: inline-flex;
+}
+
+.Form{
+	padding: 5px;
+	display: inline-flex;
+}
+
+.container{
+	margin-left: 20px;
+}
