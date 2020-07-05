@@ -21,6 +21,15 @@
 	display: flex;
 	justify-content: space-between;
 }
+label{
+	margin-left: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	width: 400px;
+	background-color: #eee;
+	color: #333;
+}
 
 input[type="text"]{
 	margin-left: 5px;

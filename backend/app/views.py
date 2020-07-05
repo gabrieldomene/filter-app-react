@@ -1,5 +1,7 @@
 from app import app
-from app.image_manager import download_image, gaussian_filter, search_content, load_from_server, canny_edges
+from app.image_manager import (
+	download_image, gaussian_filter, search_content, 
+	load_from_server, canny_edges, gray_image )
 import json
 from flask import request
 
@@ -32,4 +34,9 @@ def load_image(name):
 @app.route("/canny/<name>", methods=["GET"])
 def filter_canny(name):
 	image = canny_edges(name)
+	return image
+
+@app.route("/gray/<name>", methods=["GET"])
+def filter_gray(name):
+	image = gray_image(name)
 	return image

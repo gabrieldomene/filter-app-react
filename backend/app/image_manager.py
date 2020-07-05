@@ -63,3 +63,18 @@ def load_from_server(name):
 	_, img_buffer = cv2.imencode(".jpg", img)
 	str_img = base64.b64encode(img_buffer).decode("utf-8")
 	return {"b64": str_img}
+
+def gray_image(name):
+	content = os.listdir("./app/static/")
+	print(name, content)
+	if name in content:
+		img = cv2.imread("./app/static/{}".format(name), 1)
+		gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+		cv2.imwrite("./app/static/gray-{}".format(name), gray)
+
+	path_to_file = os.path.join("./app/static/", "gray-{}".format(name))
+	img = cv2.imread(path_to_file)
+	_, img_buffer = cv2.imencode(".jpg", img)
+	str_img = base64.b64encode(img_buffer).decode("utf-8")
+
+	return {"b64": str_img}

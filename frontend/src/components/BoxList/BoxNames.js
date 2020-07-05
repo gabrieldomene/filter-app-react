@@ -65,8 +65,7 @@ class BoxName extends Component {
 				<div className="filters container-select">
 					<input type="button" onClick={this.attImage} value="canny" />
 					<input type="button" onClick={this.attImage} value="gaussian" />
-					<input type="button" value="Filtro3" />
-					<input type="button" value="Filtro4" />
+					<input type="button" onClick={this.attImage} value="gray" />
 				</div>
 				<div className="container-img">
 					<div className="img-orig">
