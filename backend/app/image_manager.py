@@ -34,7 +34,7 @@ def gaussian_filter(name):
 	path_to_file = os.path.join("./app/static/", "blur-{}".format(name))
 	img = cv2.imread(path_to_file)
 	_, img_buffer = cv2.imencode(".jpg", img)
-	str_img = json.dumps(base64.b64encode(img_buffer).decode("utf-8"))
+	str_img = base64.b64encode(img_buffer).decode("utf-8")
 
 	return {"b64": str_img}
 
@@ -49,7 +49,7 @@ def canny_edges(name):
 	path_to_file = os.path.join("./app/static/", "canny-{}".format(name))
 	img = cv2.imread(path_to_file)
 	_, img_buffer = cv2.imencode(".jpg", img)
-	str_img = json.dumps(base64.b64encode(img_buffer).decode("utf-8"))
+	str_img = base64.b64encode(img_buffer).decode("utf-8")
 
 	return {"b64": str_img}
 	
@@ -61,5 +61,5 @@ def load_from_server(name):
 	path_to_file = os.path.join("./app/static/", name)
 	img = cv2.imread(path_to_file)
 	_, img_buffer = cv2.imencode(".jpg", img)
-	str_img = json.dumps(base64.b64encode(img_buffer).decode("utf-8"))
+	str_img = base64.b64encode(img_buffer).decode("utf-8")
 	return {"b64": str_img}

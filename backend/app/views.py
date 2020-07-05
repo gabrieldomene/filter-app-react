@@ -17,7 +17,7 @@ def upload_image():
 @app.route("/gaussian/<name>", methods=["GET"])
 def filter_gaussian(name):
 	image = gaussian_filter(name)
-	return {"image": image}
+	return image
 
 @app.route("/list", methods=["GET"])
 def list_images():
