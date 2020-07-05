@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 
 
@@ -29,14 +29,14 @@ class Upload extends Component {
 
 	render() {
 		return (
-			<form onSubmit={this.handleSubmit} className="Form">
-				<div>
-					<label> URL Direct link</label>
-					<input type="text" name="url" value={this.state.url}
-					placeholder="http://example.com" onChange={this.handleUrlChange}/>
-					<input type="submit" value="Upload" />
-				</div>
-			</form>
+			<div className="container-el">
+				<form onSubmit={this.handleSubmit} className="Form">
+						<label> URL Direct link</label>
+						<input type="text" name="url" value={this.state.url}
+						placeholder="http://example.com" onChange={this.handleUrlChange}/>
+						<input type="submit" value="Upload" />
+				</form>
+			</div>
 		)
 	}
 }
